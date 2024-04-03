@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Patientenstammdaten Eingabe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            color: #666;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            color: #666;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Patientenstammdaten Eingabe</h1>
+    <p>Bitte füllen Sie das folgende Formular aus, um einen neuen Patienten anzulegen.</p>
+
+    <form action="/pfad-zum-server-endpunkt" method="post">
+        <label for="svn">SVN:</label>
+        <input type="text" id="svn" name="svn" required>
+        
+        <label for="vorname">Vorname:</label>
+        <input type="text" id="vorname" name="vorname" required>
+        
+        <label for="nachname">Nachname:</label>
+        <input type="text" id="nachname" name="nachname" required>
+        
+        <input type="submit" value="Daten speichern">
+    </form>
+</div>
+
+</body>
+</html>
